@@ -1,0 +1,37 @@
+:root {
+    --red: #d01c28;
+    --gray: #2e2e2e;
+}
+
+body {
+    font-family: "Popins", "Open Sans", sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    padding: 6px 16px;
+    background: var(--red);
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 4px;
+}
