@@ -24,10 +24,21 @@ export class AuthService {
                 name
             ); // Create user account
             if (userAccount) {
-              // Call another function 
+                // Call another function 
+                return this.login({ email, password })
             } else {
                 return userAccount;
             }
+        } catch (error) {
+            console.log(error);
+            throw error;
+        }
+    }
+
+    async login({ email, password }) {
+        try {
+            const session = await this.account.createEmailSession(email, password);
+            return session;
         } catch (error) {
             console.log(error);
             throw error;
